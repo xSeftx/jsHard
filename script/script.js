@@ -11,6 +11,6 @@ console.log('Произведение цифр этого числа: ' + sum);
 let number = sum**3;
 numberString = number.toString();
 console.log('Результат возведения в степень 3: ' + numberString);
-console.log('Первые 2 цифры полученного числа: ' + numberString.substring(0,3));
+console.log('Первые 2 цифры полученного числа: ' + numberString.substring(0,2));
 
 

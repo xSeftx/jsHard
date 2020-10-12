@@ -1,16 +1,40 @@
-let num = 266219;
-numString = num.toString();
-let sum = 1;
-for ( i = 0; i < numString.length; i++) {
-    sum *= numString[i];
-    
+'use strict';
+
+
+let lang = prompt('Введите значение '  + '"ru" ' + 'или ' + '"en"');
+if (lang === 'ru'){
+    console.log('пн ' + 'вт ' + 'ср ' + 'чт ' + 'пт ' + 'сб ' + 'вс');
+} else if(lang === 'en'){
+    console.log('mn ' + 'ts ' + 'wd ' + 'th ' + 'fr ' + 'st ' + 'sn');
+} else {
+    console.log('Что-то пошло не так');
 }
-console.log('Произведение цифр этого числа: ' + sum);
 
 
-let number = sum**3;
-numberString = number.toString();
-console.log('Результат возведения в степень 3: ' + numberString);
-console.log('Первые 2 цифры полученного числа: ' + numberString.substring(0,2));
+switch (lang){
+    case 'ru':
+        console.log('пн ' + 'вт ' + 'ср ' + 'чт ' + 'пт ' + 'сб ' + 'вс');
+        break;
+    case 'en':
+        console.log('mn ' + 'ts ' + 'wd ' + 'th ' + 'fr ' + 'st ' + 'sn');
+        break;
+    default:
+        console.log('Что-то пошло не так');
+}
+
+
+
+let objLang = {
+  ru: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+  en: ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+}
+console.log(objLang[lang]);
+
+let namePerson = prompt('Введите значение: ' + '"Артем" ' + 'или ' + '"Максим"');
+let firstPerson = 'Артем';
+let secondPerson = 'Максим';
+let result = namePerson===firstPerson ? console.log('директор') : namePerson===secondPerson ? console.log('преподаватель') : console.log('студент'); 
+
+
 
 

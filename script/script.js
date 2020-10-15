@@ -1,18 +1,35 @@
-let userName = function(name){
-    if (typeof name === 'string') {        
-        if (name.trim().length > 30) {
-            return (name.substr(0, 30) + '...');
-        
-        } else {
-            return name;
-        }
-    } else {
-        return ('Вы ввели число')
-    }
-};
-    
+'use strict';
 
-console.log(userName(' 123456789 '));
+let arr = ['32', '27', '755', '12', '58', '78', '377'];
+
+let startArr = function(num1, num2) {
+    for (let i = 0; i < arr.length; i++) {
+        let str = arr[i] + "";
+        if (str[0] === num1 || str[0] === num2) {
+            console.log(arr[i]);
+        }
+    }
+};  
+ 
+
+console.log(startArr('3', '7'));
+
+let namber = 100;
+for (let i = 2; i <= namber; i++) {
+    let flag = 1;
+    for (let j = 2; (j <= i/2) && (flag == 1); j = j+1){
+        if (i % j == 0){
+            flag=0;
+        }
+    }
+    if (flag == 1) {
+        console.log(i + ' Делители этого числа: ' + '1 и ' + i);
+    }
+}
+
+
+
+
 
 
 

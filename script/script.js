@@ -1,6 +1,6 @@
 'use strict';
 
-let arr = ['32', '27', '755', '12', '58', '78', '377'];
+let arr = ['42', '27', '755', '12', '58', '48', '277'];
 
 let startArr = function(num1, num2) {
     for (let i = 0; i < arr.length; i++) {
@@ -12,7 +12,7 @@ let startArr = function(num1, num2) {
 };  
  
 
-console.log(startArr('3', '7'));
+console.log(startArr('2', '4'));
 
 let namber = 100;
 for (let i = 2; i <= namber; i++) {

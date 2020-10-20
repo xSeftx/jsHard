@@ -1,32 +1,64 @@
 'use strict';
 
-let arr = ['42', '27', '755', '12', '58', '48', '277'];
 
-let startArr = function(num1, num2) {
-    for (let i = 0; i < arr.length; i++) {
-        let str = arr[i] + "";
-        if (str[0] === num1 || str[0] === num2) {
-            console.log(arr[i]);
-        }
-    }
-};  
- 
 
-console.log(startArr('2', '4'));
 
-let namber = 100;
-for (let i = 2; i <= namber; i++) {
-    let flag = 1;
-    for (let j = 2; (j <= i/2) && (flag == 1); j = j+1){
-        if (i % j == 0){
-            flag=0;
-        }
-    }
-    if (flag == 1) {
-        console.log(i + ' Делители этого числа: ' + '1 и ' + i);
-    }
+
+
+let clock = function() {
+    let Data = new Date(),
+    Year = Data.getFullYear(),
+
+    Month = Data.getMonth(),
+    Day = Data.getDate(),
+    Hour = Data.getHours(),
+    Minutes = Data.getMinutes(),
+    Seconds = Data.getSeconds(),
+    hour = '', 
+
+    nowMonth = ["января", "февраля", "марта", "мае", "июня", "июля", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+
+
+
+
+
+
+let calendar = function() {
+if (Hour === 1 || Hour === 21){
+    hour = 'час';
+} else if(Hour >= 2 && Hour <= 4 || Hour >= 22 && Hour <= 24){
+    hour = 'часа';
+} else {
+    hour = 'часов';
+}return hour;
+
+};
+
+calendar();
+
+let getZero = function(nam){
+if (nam > 0 && nam < 10) { 
+    return '0' + nam;
+} else {
+    return nam;
 }
+};
 
+    
+let timerOne = ('Сегодня ' + Day + ' ' + nowMonth[Month] + ' ' + Year + ' года ' + Hour + ' ' + hour + ' ' + Minutes + ' минут ' + Seconds + ' секунд' + '<br>' ); 
+
+
+
+let timerTwo = ('<br>' + getZero(Hour) + ':' + getZero(Minutes) + ':' + getZero(Seconds) + ' ' + getZero(Day) + '.' + getZero(Month) + '.' + getZero(Year) + '  ');
+
+
+document.getElementById("clock_one").innerHTML = timerOne;
+
+document.getElementById("clock_two").innerHTML = timerTwo;
+};
+
+ 
+setInterval(clock, 1000);
 
 
 

@@ -12,6 +12,7 @@ function getTime(){
         divDay = document.querySelector('.day'),
         divTime = document.querySelector('.time'),
         divYear = document.querySelector('.new-year'),
+        divSpan = document.querySelector('.span-day'),
         nowData = new Date().getTime(),
         dataNewYear = new Date('1 January 2021').getTime(),
         timeRemaining = ((dataNewYear - nowData)/1000),        
@@ -36,7 +37,7 @@ function getTime(){
     
     
     function sayHello(){    
-    if (hour > 20 && hour < 5){
+    if (hour > 20 || hour < 5){
         divSay.textContent = 'Доброй ночи';
     } else if (hour > 5 && hour < 11) {
         divSay.textContent = 'Доброе утро';
@@ -46,7 +47,10 @@ function getTime(){
     
     divDay.textContent = `Сегодня: ${days[day-1]}`;
     divTime.textContent = `Текущее время: ${getZero(hour)}: ${getZero(minutes)}: ${getZero(seconds)} ${hour < 12 ? mid='AM' : mid='PM'}`;
-    divYear.textContent = `До Нового года осталось ${Math.floor((timeRemaining)/60 / 60 /24)} дней`
+    divYear.textContent = `До Нового года осталось`;
+    divSpan.textContent = `${Math.floor((timeRemaining)/60 / 60 /24)} дней`;
+    divSpan.style.color = 'red';
+    divTime.style.color = 'green';
 
     
 
@@ -56,7 +60,7 @@ function getTime(){
 
     sayHello();
 }
-
+// getTime();
 setInterval(getTime, 1000);
 
 

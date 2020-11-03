@@ -24,8 +24,14 @@
   margin-bottom: 20px;
 }
 
-.new-year {
-  color: #d0002d;
+.new-year {    
+  color: #0071D0;
   font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.span-day {  
+  color: rgba(131, 7, 23, 0);
   font-size: 25px;
 }

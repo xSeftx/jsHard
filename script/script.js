@@ -36,9 +36,9 @@ function getTime(){
     
     
     function sayHello(){    
-    if (hour > 20 || hour < 5){
+    if (hour > 20 && hour < 5){
         divSay.textContent = 'Доброй ночи';
-    } else if (hour > 5 || hour < 11) {
+    } else if (hour > 5 && hour < 11) {
         divSay.textContent = 'Доброе утро';
     } else {
         divSay.textContent = 'Доброй день';

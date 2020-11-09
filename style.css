@@ -1,37 +1,26 @@
-.say-hello {
-  display: flex;
+html {
+  box-sizing: border-box;
+  background: #008d3b;
+}
+
+
+.wrapper {    
+  display: flex;    
   flex-direction: column;
-  align-items: center;
-}
-.say {
-  color: #0071D0;
-  font-weight: bold;
-  font-size: 40px;
-  margin-bottom: 20px;
+  align-items: center;    
+
 }
 
-.day {
-  color: #0071D0;
-  font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 20px;
+.color {
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  color: white;
 }
 
-.time {
-  color: #0071D0;
-  font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.new-year {    
-  color: #0071D0;
-  font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.span-day {  
-  color: rgba(131, 7, 23, 0);
-  font-size: 25px;
+.btn {
+  padding: 15px 55px;
+  font-size: 1.5rem; 
+  border-radius: 50px; 
+  font-family: sans-serif;
+  color: #008d3b;
 }
